@@ -1,0 +1,28 @@
+Source: libdevel-overloadinfo-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: libextutils-hascompiler-perl,
+                     libmro-compat-perl <!nocheck>,
+                     libpackage-stash-perl <!nocheck>,
+                     libtest-fatal-perl <!nocheck>,
+                     perl
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libdevel-overloadinfo-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libdevel-overloadinfo-perl.git
+Homepage: https://metacpan.org/release/Devel-OverloadInfo
+Rules-Requires-Root: no
+
+Package: libdevel-overloadinfo-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libmro-compat-perl,
+         libpackage-stash-perl
+Description: module to introspect overloaded operators
+ Devel::OverloadInfo returns information about overloaded operators for a
+ given class (or object), including where in the inheritance hierarchy the
+ overloads are declared and where the code implementing it is.
